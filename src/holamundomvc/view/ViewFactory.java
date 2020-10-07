@@ -32,7 +32,6 @@ public class ViewFactory{
 
         switch (opc) {
             case 1:
-               // return new ViewVentanaFx();
                 return new ViewVentanaFx();
             case 2:
                 return new ViewVentana();              

@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 
 /**
  * Muestra una ventana JAvaFx
- * @author user
+ * @author Fredy Vargas
  */
 public class ViewVentanaFx implements View{
     
