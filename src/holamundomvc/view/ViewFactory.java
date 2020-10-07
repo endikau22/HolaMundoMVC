@@ -8,6 +8,7 @@ package holamundomvc.view;
 import holamundomvc.model.ModelImplementation;
 import holamundomvc.model.ModelImplementationBD;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 /**
  * Factoria de la vista.
@@ -19,25 +20,24 @@ public class ViewFactory{
      * @return Devuelve la interfaz Vista. //Nunca retornar una clase siempre la interfaz.
 
      */
+     private static final Logger LOGGER = Logger.getLogger("holamundomvc.view");
     public View getView(){
+        
         ResourceBundle rb = ResourceBundle.getBundle("holamundomvc.view.tipovista");
 
-        int opc = 2;
+        int opc = 3;
         try {
-
             opc = Integer.parseInt(rb.getString("vista"));
-
         } catch (Exception e) {
-
+            LOGGER.severe("Tipo de dato erroneo opcion 3 selecionada por defecto. ");
         }
 
         switch (opc) {
             case 1:
+               // return new ViewVentanaFx();
                 return new ViewVentanaFx();
             case 2:
-                return new ViewVentana();
-                case 3:
-                return new ViewImplementation();
+                return new ViewVentana();              
             default:
                 return new ViewImplementation();
         }

@@ -22,7 +22,7 @@ public class ViewVentanaFx implements View{
     
      private static void initAndShowGUI(String greeting) {
         
-        JFrame frame = new JFrame("Swing and JavaFX");
+        JFrame frame = new JFrame("Hola Mundo MVC");
         final JFXPanel fxPanel = new JFXPanel();
         frame.add(fxPanel);
         frame.setSize(300, 200);
@@ -38,25 +38,24 @@ public class ViewVentanaFx implements View{
     }
 
     private static void initFX(JFXPanel fxPanel,String greeting) {
-        // This method is invoked on the JavaFX thread
+       
         Scene scene = createScene(greeting);
         fxPanel.setScene(scene);
     }
 
     private static Scene createScene(String greeting) {
         Group  root  =  new  Group();
-        Scene  scene  =  new  Scene(root, Color.ALICEBLUE);
-        Text  text  =  new  Text();
-        
+        Scene  scene  =  new  Scene(root, Color.WHITE);
+        Text  text  =  new  Text(); 
         text.setX(40);
         text.setY(100);
         text.setFont(new Font(25));
         text.setText(greeting);
-
         root.getChildren().add(text);
 
         return (scene);
     }
+    
     
 
     @Override
@@ -67,3 +66,6 @@ public class ViewVentanaFx implements View{
     }
     
 }
+
+    
+

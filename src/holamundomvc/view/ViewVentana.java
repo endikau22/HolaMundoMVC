@@ -30,7 +30,6 @@ public class ViewVentana extends javax.swing.JFrame implements View{
        ViewVentana v = new ViewVentana();
        jLabelSaludoHolaMundo = new JLabel();
        jLabelSaludoHolaMundo.setBounds(40, 50, 100, 200);
-       //jLabelSaludoHolaMundo.setSize(300, 200);
        jLabelSaludoHolaMundo.setText(greeting);
        add(jLabelSaludoHolaMundo);
        this.setVisible(true);

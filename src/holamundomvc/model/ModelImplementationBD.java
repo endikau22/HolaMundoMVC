@@ -55,7 +55,7 @@ public class ModelImplementationBD implements Model {
             try {
                 openConnection();
                 stmt = (Statement) con.createStatement();
-                String query = "SELECT * FROM mensaje";
+                String query = "SELECT * FROM saludo";
                rs = stmt.executeQuery(query);
                 if(rs.next()){
                     mensaje= rs.getString(1);
@@ -65,7 +65,7 @@ public class ModelImplementationBD implements Model {
             } catch (SQLException ex) {
                  LOGGER.severe(ex.getMessage());
             }
-            LOGGER.info(mensaje);
+          //  LOGGER.info(mensaje);
             return mensaje;
            
             }
