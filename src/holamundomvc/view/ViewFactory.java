@@ -5,8 +5,6 @@
  */
 package holamundomvc.view;
 
-import holamundomvc.model.ModelImplementation;
-import holamundomvc.model.ModelImplementationBD;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 

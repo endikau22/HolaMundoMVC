@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- *
+ * Esta clase muestra una ventana Swing.
  * @author 2dam
  */
 public class ViewVentana extends javax.swing.JFrame implements View{
@@ -23,7 +23,10 @@ public class ViewVentana extends javax.swing.JFrame implements View{
     
     
     
-
+    /**
+     * Añade un jLabel con un String en la ventana.
+     * @param greeting String 
+     */
     @Override
     public void showGreeting(String greeting) {
        JLabel jLabelSaludoHolaMundo;

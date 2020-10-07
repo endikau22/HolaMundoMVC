@@ -15,7 +15,7 @@ import javafx.scene.text.Text;
 import javax.swing.JFrame;
 
 /**
- *
+ * Muestra una ventana JAvaFx
  * @author user
  */
 public class ViewVentanaFx implements View{

@@ -15,7 +15,7 @@ import holamundomvc.model.Model;
  */
 public class Controller{
     /**
-     * 
+     * Muestra un String.
      * @param vista Una vista, tenemos una clase que implementa la interfaz vista.
      * @param modelo Un modelo, tenemos una clase que implementa la interfaz modelo.
      */
