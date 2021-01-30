@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 
 /**
  * Clase que implementa la interfaz Model. Recoge un String de un fichero de propiedades.
- * @author 2dam
+ * @author Endika Ubierna.
  */
 public class ModelImplementation implements Model{
 
@@ -23,4 +23,4 @@ public class ModelImplementation implements Model{
     }
     
 }
- 
+  

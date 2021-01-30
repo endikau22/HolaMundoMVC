@@ -5,39 +5,27 @@
  */
 package holamundomvc.model;
 
-import java.util.ResourceBundle;
-
 /**
  * Esta clase es una factoria para crear objetos de el modelo.
- *
  * @author Endika Ubierna Lopez
  */
 public class ModelFactory {
 
     /**
-     *
-     * @return Retorna un nuevo modelo. El tipo que devuelve es la interfaz pero
-     * en realidad por polimorfismo devuelve una nueva instancia de la clase
+     * Metodo que devuelve el modelo de la aplicación. Este está almacenado en un fichero o en una BBDD.
+     * @param modelo String del fichero de propiedades
+     * @return Retorna un nuevo modelo. 
      * ModelImplementation
      */
-    public Model getModel() {
-        
-        ResourceBundle rb = ResourceBundle.getBundle("holamundomvc.model.tipomodel");
-        int opc = 2;
-        try {
-
-            opc = Integer.parseInt(rb.getString("model"));
-
-        } catch (Exception e) {
-
-        }
-
-        switch (opc) {
-            case 1:
+    //Se devuelve la interface no la implementación.
+    public static Model getModel(String modelo) {
+        switch (modelo) {
+            case "fichero":
                 return new ModelImplementation();
-            
-            default:
+            case "bbdd": 
                 return new ModelImplementationBD();
+            default:
+                return new ModelImplementation();
         }
     }
 }

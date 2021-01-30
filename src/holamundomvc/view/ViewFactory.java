@@ -5,7 +5,6 @@
  */
 package holamundomvc.view;
 
-import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 /**
@@ -14,26 +13,18 @@ import java.util.logging.Logger;
  */
 public class ViewFactory{
     /**
-     * Este metodo se encarga de crear una implementacion de la vista.
-     * @return Devuelve la interfaz Vista. //Nunca retornar una clase siempre la interfaz.
-
+     * Logger object used to control activity from class
+     * SectorManagerImplementation.
      */
-     private static final Logger LOGGER = Logger.getLogger("holamundomvc.view");
-    public View getView(){
-        
-        ResourceBundle rb = ResourceBundle.getBundle("holamundomvc.view.tipovista");
-
-        int opc = 3;
-        try {
-            opc = Integer.parseInt(rb.getString("vista"));
-        } catch (Exception e) {
-            LOGGER.severe("Tipo de dato erroneo opcion 3 selecionada por defecto. ");
-        }
-
-        switch (opc) {
-            case 1:
-                return new ViewVentanaFx();
-            case 2:
+    private static final Logger LOGGER = Logger.getLogger("ViewFactory");
+    /**
+     * Este metodo se encarga de crear una implementacion de la vista.
+     * @param vista
+     * @return Devuelve la interfaz Vista. //Nunca retornar una clase siempre la interfaz.
+     */
+    public static  View getView(String vista){
+        switch (vista) {
+            case "swing":
                 return new ViewVentana();              
             default:
                 return new ViewImplementation();

@@ -16,8 +16,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 /**
- *
- * @author user
+ * Clase que implementa la interfaz Model. Recoge un String de una base de datos.
+ * @author Endika Ubierna.
  */
 public class ModelImplementationBD implements Model {
     private static final Logger LOGGER = Logger.getLogger("holamundomvc.ModelImplementationBD");

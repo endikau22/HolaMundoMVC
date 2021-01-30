@@ -6,12 +6,10 @@
 package holamundomvc.view;
 
 /**
- * Esta interfaz contiene el metodo showGreeting, el cual será usado por el controller
- * 
+ * Esta interfaz contiene el metodo showGreeting, muestra el mensaje en un formato a determinar. Consola, Swing o JavaFX.
  * @author Endika Ubierna Lopez
  */
-public interface View{
-   
+public interface View{ 
     /**
      * Muestra el saludo que recibe en la interfaz de usuario.
      * @param greeting Este parametro es el String del fichero en el que guardamos el saludo

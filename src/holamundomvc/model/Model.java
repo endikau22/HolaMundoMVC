@@ -6,8 +6,8 @@
 package holamundomvc.model;
 
 /**
- * Esta interfaz será usada por el controller. Contiene los datos del proyecto.
- * @author 2dam
+ * Esta interfaz contiene el modelo de la aplicación. En este proyecto el model o es un String: Hola Mundo
+ * @author Endika Ubierna.
  */
 public interface Model{
     /**
